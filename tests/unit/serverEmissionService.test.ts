@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { calculateEmission } from '../../client/src/lib/emissionFactors';
+import { calculateEmission } from '../../server/src/services/emissionService';
 
-describe('Emission Calculator', () => {
+describe('Server Emission Calculator', () => {
   it('calculates car petrol emissions correctly', () => {
     expect(calculateEmission('transport', 'car_petrol_km', 100))
       .toBeCloseTo(17.1, 1);
